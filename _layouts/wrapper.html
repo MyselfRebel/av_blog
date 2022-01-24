@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{site.title}}</title>
+</head>
+<body>
+    {%if page.title=="First post"%}
+    This is the first post
+    {%include header.html color="blue"%}
+
+    {%elsif page.title=="New Title"%}
+    This is the second post
+    {%include header.html color="red"%}
+
+    {%elsif page.title=="Post 2"%}
+    This is the third post
+    {%include header.html color="green"%}
+    
+    {%endif%}
+
+    Wrapper <br>
+    {{ content }}
+    <br> Wrapper
+</body>
+</html>
